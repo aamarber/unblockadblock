@@ -3,11 +3,8 @@ chrome.runtime.onInstalled.addListener(function () {
     chrome.declarativeContent.onPageChanged.addRules([{
       conditions: [
         new chrome.declarativeContent.PageStateMatcher({
-          pageUrl: { hostEquals: 'elpais.com' },
-        }),
-        new chrome.declarativeContent.PageStateMatcher({
-          pageUrl: { hostSuffix: 'lasprovincias.es' }
-        }),
+          pageUrl: { urlMatches: '(elpais|abc)\.(com|es)' },
+        })
       ],
       actions: [
         new chrome.declarativeContent.ShowPageAction()]

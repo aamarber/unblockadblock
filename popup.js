@@ -22,7 +22,7 @@
             return {
                 scriptsMapList: [
                     buildScriptMap(/elpais/, 'elpaishider.js'),
-                    buildScriptMap(/lasprovincias/, 'lasprovinciashider.js'),
+                    buildScriptMap(/abc/, 'elpaishider.js'),
                 ],
                 getScript: function (domain) {
                     const scriptMap = this.scriptsMapList.filter(x => x.matches(domain))[0];
