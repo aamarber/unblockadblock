@@ -23,6 +23,7 @@
                 scriptsMapList: [
                     buildScriptMap(/elpais/, 'elpaishider.js'),
                     buildScriptMap(/abc/, 'elpaishider.js'),
+                    buildScriptMap(/20minutos/, 'elpaishider.js'),
                 ],
                 getScript: function (domain) {
                     const scriptMap = this.scriptsMapList.filter(x => x.matches(domain))[0];
