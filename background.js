@@ -3,7 +3,7 @@ chrome.runtime.onInstalled.addListener(function () {
     chrome.declarativeContent.onPageChanged.addRules([{
       conditions: [
         new chrome.declarativeContent.PageStateMatcher({
-          pageUrl: { urlMatches: '(elpais|abc|20minutos)\.(com|es)' },
+          pageUrl: { urlMatches: '(elpais|abc|20minutos|niusdiario)\.(com|es)' },
         })
       ],
       actions: [
