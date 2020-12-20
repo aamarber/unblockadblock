@@ -3,5 +3,9 @@
 
     if (popupContainer) {
         popupContainer.setAttribute('style','position: unset !important');
+
+        return true;
     }
+
+    return false;
 })();
