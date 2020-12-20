@@ -5,5 +5,9 @@
         popupContainer.setAttribute('style','position: unset !important');
 
         document.body.style.overflow = 'auto';
+
+        return true;
     }
+
+    return false;
 })();
