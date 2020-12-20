@@ -3,9 +3,9 @@
     "version": "1.0",
     "description": "An Adblocker popups removal",
     "permissions": [
-        "storage",
-        "declarativeContent",
-        "activeTab"
+        "http://*/",
+        "https://*/",
+        "tabs"
     ],
     "background": {
         "scripts": [
