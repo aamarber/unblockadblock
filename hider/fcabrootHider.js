@@ -1,13 +1,26 @@
-(function hide() {
-    const popupContainer = document.getElementsByClassName('fc-ab-root')[0];
-
-    if (popupContainer) {
-        popupContainer.setAttribute('style','position: unset !important');
-
-        document.body.style.overflow = 'auto';
-
-        return true;
+class FcRootHider {
+    constructor(){
+        this.classSelector = 'fc-ab-root';
     }
+    
+    hide() {
+    
+        const onPopupAdded = () => {
+            const popupContainer = document.getElementsByClassName(this.classSelector)[0];
+    
+            console.log(popupContainer);
+    
+            if (!popupContainer) { 
+                return;
+            }
+                
+            popupContainer.setAttribute('style','position: unset !important; display: none !important');
+    
+            document.body.style.overflow = 'auto';
+        }
+    
+        globals.observer.onObserved(document, (x => x.className === this.classSelector), onPopupAdded);
+    }
+}
 
-    return false;
-})();
+(function(){ new FcRootHider().hide()})();
